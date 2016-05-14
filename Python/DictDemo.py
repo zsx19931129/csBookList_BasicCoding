@@ -29,8 +29,16 @@ name = raw_input('Name: ')
 
 #查找电话号码还是地址？使用正确的键
 request = raw_input("Phone number (p) or address (a)?")
+key = request
 if request == 'p': key = 'phone'
 if request == 'a': key = 'addr'
 
 #如果名字是字典中的有效键才打印信息
-if name in people: print "%s's %s is %s." % (name, labels[key], people[name][key])
+# if name in people: print "%s's %s is %s." % (name, labels[key], people[name][key])
+
+#使用get()提供默认值，不抛出异常
+person = people.get(name, {})
+label = labes.get(key, key)
+result = person.get(key, 'not available')
+
+print "%s's %s is %s" % (person, label, result)
