@@ -10,6 +10,8 @@ def square(x):
 	9
 	'''
 	return x**x
+def product(x, y):
+	return x*y
 
 if __name__ == '__main__':
 	import doctest, doctest_my_math
