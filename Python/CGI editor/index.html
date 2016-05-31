@@ -1,0 +1,13 @@
+<!-- 这个需要被放到/Library/WebServer/Documents下，使用apache作为server，配置文件在/etc/apache2/httpd.conf，需要为支持cgi开启一些选项，以及一些路径的设置-->
+<html>
+	<head>
+		<title>File Editor</title>
+	</head>
+	<body>
+		<form action='/cgi-bin/edit.cgi' method='POST'>
+			<b>File name:<b><br />
+			<input type='text' name='filename' />
+			<input type='submit' value='Open' />
+		</form>
+	</body>
+</html>
