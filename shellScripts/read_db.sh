@@ -16,8 +16,7 @@ do
 
     result="`mysql -u $USER -p$PASS students <<EOF
     SET @i:=0;
-    SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="$d" ORDER
-    BY mark DESC;
+    SELECT @i:=@i+1 as rank,name,mark FROM students WHERE dept="$d" ORDER BY mark DESC;
     EOF`"
 
     echo "$result"
